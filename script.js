@@ -8,6 +8,7 @@ const restartBoard = document.querySelector(".restart");
 const restartBtn = document.getElementById("restartBtn");
 const resultHeader = document.getElementById("resultHeader");
 const resultPara = document.getElementById("resultPara");
+const resultNum = document.getElementById('resultNum');
 
 let number = 0;
 let attemp = 0;
@@ -55,7 +56,7 @@ function num() {
 
     resultHeader.textContent = `Congrats You Won!`;
     resultPara.textContent = `You won between ${attemp} attmepts 🎉🥳 `;
-
+    resultNum.textContent = `The Number is ${number}`;
     attemp = 0;
     generateNum();
     lastGuess = null;
@@ -104,6 +105,7 @@ function resultPage() {
 
     resultHeader.textContent = `Game Over!`;
     resultPara.textContent = `You lost limited attempts reached`;
+    resultNum.textContent = `The Number is ${number}`;
 
     attemp = 0;
     generateNum();

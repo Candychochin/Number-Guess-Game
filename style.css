@@ -98,7 +98,7 @@ input[type="number"] {
 
 #restartBtn{
     padding: 12px 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 
@@ -107,4 +107,9 @@ input[type="number"] {
 
 .hidden {
     display: none;
+}
+
+#resultNum{
+    font-size: 24px;
+    margin: 15px 0;
 }
