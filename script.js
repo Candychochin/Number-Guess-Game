@@ -9,11 +9,14 @@ const restartBtn = document.getElementById("restartBtn");
 const resultHeader = document.getElementById("resultHeader");
 const resultPara = document.getElementById("resultPara");
 const resultNum = document.getElementById('resultNum');
+const countAtempt = document.getElementById('count')
 
 let number = 0;
 let attemp = 0;
 let disable = false;
 let lastGuess = null;
+let lefatemp;
+
 
 
 input.addEventListener("input", function () {
@@ -61,7 +64,7 @@ function num() {
     generateNum();
     lastGuess = null;
   }
-
+  updateCount();
   resultPage();
 }
 
@@ -99,7 +102,7 @@ function restartGame() {
 function resultPage() {
 //   console.log(attemp);
 
-  if (attemp === 15) {
+  if (attemp === 10) {
     gameBoard.classList.add("hidden");
     restartBoard.classList.remove("hidden");
 
@@ -111,6 +114,11 @@ function resultPage() {
     generateNum();
     input.value = "";
   }
+}
+
+function updateCount(){
+  lefatemp = 10 - attemp;
+  countAtempt.textContent = lefatemp;
 }
 
 restartBtn.addEventListener("click", restartGame);
