@@ -102,7 +102,7 @@ function restartGame() {
 function resultPage() {
 //   console.log(attemp);
 
-  if (attemp === 10) {
+  if (attemp === 14) {
     gameBoard.classList.add("hidden");
     restartBoard.classList.remove("hidden");
 
@@ -117,7 +117,7 @@ function resultPage() {
 }
 
 function updateCount(){
-  lefatemp = 10 - attemp;
+  lefatemp = 14 - attemp;
   countAtempt.textContent = lefatemp;
 }
 
